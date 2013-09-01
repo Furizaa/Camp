@@ -123,6 +123,49 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1226,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".rspec",
+			"settings":
+			{
+				"buffer_size": 14,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "require 'rubygems'\nrequire 'spork'\n\nSpork.prefork do\n    require 'mocha/api'\n\n    ENV['RAILS_ENV'] ||= 'test'\n    require File.expand_path('../../config/environment', __FILE__)\n    require 'rspec/rails'\n    require 'rspec/autorun'\n    require 'shoulda'\n\n    Dir[Rails.root.join(\"spec/support/**/*.rb\")].each {|f| require f}\n\n    RSpec.configure do |config|\n        config.fail_fast = ENV['RSPEC_FAIL_FAST'] == '1'\n        config.mock_framework = :mocha\n        config.order = 'random'\n\n        # If you're not using ActiveRecord, or you'd prefer not to run each of your\n        # examples within a transaction, remove the following line or assign false\n        # instead of true.\n        config.use_transactional_fixtures = true\n\n        # If true, the base class of anonymous controllers will be inferred\n        # automatically. This will be the default behavior in future versions of\n        # rspec-rails.\n        config.infer_base_class_for_anonymous_controllers = true\n\n        config.before do\n            ActiveRecord::Base.observers.disable :all\n        end\n    end\nend\n\nSpork.each_run do\n    #Rails.cache.reconnect\nend\n",
+			"file": "spec/spec_helper.rb",
+			"file_size": 1129,
+			"file_write_time": 1377549036000000,
+			"settings":
+			{
+				"buffer_size": 1129,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/database.yml",
+			"settings":
+			{
+				"buffer_size": 1675,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sublime-project",
+			"settings":
+			{
+				"buffer_size": 454,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -130,6 +173,10 @@
 		"height": 374.0,
 		"selected_items":
 		[
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
 			[
 				"jshint",
 				"JSHint: Set Linting Preferences"
@@ -231,7 +278,7 @@
 				"Indentation: Convert to Spaces"
 			]
 		],
-		"width": 435.0
+		"width": 498.0
 	},
 	"console":
 	{
@@ -469,8 +516,147 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1226,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1201,
+								1220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".rspec",
+					"settings":
+					{
+						"buffer_size": 14,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "spec/spec_helper.rb",
+					"settings":
+					{
+						"buffer_size": 1129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								485,
+								485
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "config/database.yml",
+					"settings":
+					{
+						"buffer_size": 1675,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1662,
+								1662
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 124.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sublime-project",
+					"settings":
+					{
+						"buffer_size": 454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								199,
+								199
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -517,7 +703,11 @@
 		[
 			[
 				"",
-				"main.js"
+				"spec/spec_helper.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
 			],
 			[
 				"poscont",
@@ -546,10 +736,6 @@
 			[
 				"spechel",
 				"spec/spec_helper.rb"
-			],
-			[
-				"gemf",
-				"Gemfile"
 			],
 			[
 				"seed",

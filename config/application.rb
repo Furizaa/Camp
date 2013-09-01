@@ -25,7 +25,13 @@ module Camp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Custom directories with classes and modules you want to be autoloadable.
+    config.autoload_paths += %W(#{config.root}/app/validators)
+
     # Disable the asset pipeline.
     config.assets.enabled = false
+
+    # Password hash iterations
+    config.pbkdf2_iterations = 64000
   end
 end

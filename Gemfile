@@ -5,11 +5,11 @@ gem 'rails', '4.0.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
-
-
+gem 'rails-observers'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem 'fast_xor', git: 'https://github.com/CodeMonkeySteve/fast_xor.git'
 
 group :doc do
     # bundle exec rake doc:rails generates the API under doc/api.
@@ -46,4 +46,5 @@ group :test, :development do
     gem 'pry-rails'
     gem 'pry-nav'
     gem 'spork-rails', :github => 'sporkrb/spork-rails'
+    gem 'debugger'
 end
