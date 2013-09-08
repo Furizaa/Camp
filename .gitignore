@@ -34,10 +34,10 @@ config/environments/production.rb
 /db/structure.sql
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
-/plugins
-/logfile
+#/log/*.log
+#/tmp
+#/plugins
+#/logfile
 
 /spec/fixtures/plugins/my_plugin/auto_generated
 
@@ -53,7 +53,7 @@ config/environments/production.rb
 # Ignore gem that is copied in
 MiniProfiler/Ruby/rack-mini-profiler-2.0.1a.gem
 
-sublime-project.sublime-workspace
+#sublime-project.sublime-workspace
 
 # Vim temp files
 *~
@@ -84,9 +84,3 @@ chef/tmp/*
 
 # exclude our git version file for now
 config/version.rb
-
-# ignore the Ruby Version manager (rvm)
-.rvmrc
-.ruby-version
-.ruby-gemset
-.rbenv
