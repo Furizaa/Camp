@@ -1,7 +1,7 @@
 class SessionController < ApplicationController
 
   def create
-    @user = User.where(email: session_params[:email].downcase).first
+    @user = User.find_by_email(session_params[:email].downcase)
     if @user.present? && @user.confirm_password?(session_params[:password])
       log_on_user(@user)
       return render json: @user

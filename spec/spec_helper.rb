@@ -3,13 +3,13 @@ require 'spork'
 
 Spork.prefork do
   #require 'mocha/api'
-  require 'fabrication'
 
   ENV['RAILS_ENV'] ||= 'test'
   require File.expand_path('../../config/environment', __FILE__)
   require 'rspec/rails'
   require 'rspec/autorun'
   require 'shoulda'
+  require 'fabrication'
 
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
